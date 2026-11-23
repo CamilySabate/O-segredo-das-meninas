@@ -1,0 +1,863 @@
+
+/* =========================================
+   FONTES E IDENTIDADE VISUAL
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+:root {
+    --verde: #556B2F;
+    --verde-escuro: #3F5126;
+    --verde-suave: #899477;
+
+    --creme: #F6E7C6;
+    --papel: #FBF8EF;
+    --papel-escuro: #EAE2D1;
+
+    --marrom: #655747;
+    --marrom-claro: #A18C72;
+
+    --rosa: #DDB8AE;
+    --branco: #FFFDF8;
+
+    --sombra: rgba(65, 58, 40, 0.13);
+}
+
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--papel);
+    color: var(--marrom);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+main * {
+    box-sizing: border-box;
+}
+
+main h1,
+main h2,
+main h3,
+main h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--verde);
+    font-weight: 500;
+}
+
+main p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.93rem;
+    line-height: 1.9;
+    color: var(--marrom);
+}
+
+main section {
+    padding: 90px 9%;
+    position: relative;
+    scroll-margin-top: 90px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    width: 100%;
+    margin: 0;
+    padding: 22px 4%;
+    background-color: var(--verde);
+    border-bottom: 1px solid var(--papel);
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.header .header-logo {
+    color: #FFFFFF;
+    font-size: 23px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header .header-logo span {
+    color: #F5C5D3;
+}
+
+.header .header-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 12px 25px;
+}
+
+.header .header-navigation a {
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header .header-navigation a:hover {
+    color: #F5C5D3;
+}
+
+/* =========================================
+   TÍTULOS DAS SEÇÕES
+========================================= */
+
+.titulo-secao {
+    text-align: center;
+    margin: 0 auto 50px;
+    max-width: 800px;
+}
+
+.etiqueta {
+    display: block;
+    color: var(--marrom-claro);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+.titulo-secao h2 {
+    font-size: clamp(2rem, 4vw, 2.9rem);
+    margin-bottom: 12px;
+}
+
+.flor-divisoria {
+    display: block;
+    color: var(--verde-suave);
+    font-size: 1.3rem;
+    margin: 12px 0 20px;
+    animation: florRespira 4s ease-in-out infinite;
+}
+
+.titulo-secao > p {
+    max-width: 700px;
+    margin: 15px auto 0;
+}
+
+/* =========================================
+   INÍCIO
+========================================= */
+
+main #inicio {
+    min-height: 650px;
+    padding: 85px 10% 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    background:
+        radial-gradient(circle at 10% 15%, #DDB8AE38, transparent 25%),
+        radial-gradient(circle at 90% 80%, #89947735, transparent 28%),
+        var(--creme);
+}
+
+.inicio-texto {
+    animation: aparecerEsquerda 1s ease both;
+}
+
+.inicio-texto h1 {
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.inicio-texto h1 span {
+    color: var(--verde);
+    font-style: italic;
+}
+
+.inicio-texto p {
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.botao-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 22px;
+    background: var(--verde);
+    color: var(--branco);
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.83rem;
+    transition: 0.3s ease;
+}
+
+.botao-link span {
+    color: var(--branco);
+}
+
+.botao-link:hover {
+    background: var(--verde-escuro);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px var(--sombra);
+}
+
+/* FOTOS */
+
+.inicio-fotos {
+    min-height: 440px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: aparecerDireita 1s ease both;
+}
+
+.foto-atual {
+    width: 285px;
+    height: 365px;
+    padding: 11px 11px 38px;
+    background: var(--branco);
+    box-shadow: 0 12px 30px var(--sombra);
+    transform: rotate(3deg);
+    transition: 0.4s ease;
+    z-index: 1;
+}
+
+.foto-atual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto-atual span,
+.foto-infancia span {
+    display: block;
+    text-align: center;
+    color: var(--marrom);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    margin-top: 7px;
+}
+
+.foto-atual:hover {
+    transform: rotate(0deg) scale(1.04);
+}
+
+.foto-infancia {
+    position: absolute;
+    width: 155px;
+    padding: 9px 9px 30px;
+    background: var(--branco);
+    box-shadow: 0 8px 25px var(--sombra);
+    left: 0;
+    bottom: 10px;
+    transform: rotate(-9deg);
+    z-index: 2;
+    transition: 0.4s ease;
+}
+
+.foto-infancia img {
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+}
+
+.foto-infancia:hover {
+    transform: rotate(-3deg) scale(1.08);
+}
+
+/* ENFEITES */
+
+.decoracao {
+    position: absolute;
+    color: var(--verde);
+    animation: flutuar 3.5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.decoracao-estrela {
+    top: 25px;
+    right: 35px;
+    font-size: 2.2rem;
+}
+
+.decoracao-flor {
+    top: 100px;
+    left: 5px;
+    font-size: 2rem;
+    animation-delay: 0.8s;
+}
+
+.decoracao-brilho {
+    bottom: 30px;
+    right: 15px;
+    font-size: 2.5rem;
+    animation-delay: 1.3s;
+}
+
+.frase-inicio {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--verde);
+}
+
+.frase-inicio span {
+    color: var(--rosa);
+    font-size: 2rem;
+    padding: 0 8px;
+}
+
+/* =========================================
+   SOBRE MIM
+========================================= */
+
+.sobre {
+    background-color: var(--papel);
+    text-align: center;
+}
+
+.sobre-introducao {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px 45px;
+    background: var(--branco);
+    border: 1px solid #DCD3C0;
+    box-shadow: 5px 5px 0 #E8E0D0;
+    text-align: left;
+}
+
+.sobre-introducao p {
+    margin-bottom: 15px;
+}
+
+.sobre-introducao p:last-child {
+    margin-bottom: 0;
+}
+
+.sobre-introducao strong {
+    color: var(--verde);
+    font-weight: 600;
+}
+
+.subtitulo {
+    font-size: 1.7rem;
+    margin: 70px 0 30px;
+}
+
+.curiosidades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.curiosidade-card {
+    background: var(--branco);
+    padding: 30px 25px;
+    border: 1px solid #E9E1D2;
+    box-shadow: 0 5px 18px var(--sombra);
+    text-align: left;
+    transition: 0.35s ease;
+    position: relative;
+}
+
+.curiosidade-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 35px;
+    height: 3px;
+    background: var(--rosa);
+}
+
+.curiosidade-card:hover {
+    transform: translateY(-8px) rotate(-1deg);
+    box-shadow: 0 12px 25px var(--sombra);
+}
+
+.icone-card {
+    font-size: 1.6rem;
+    color: var(--verde-suave);
+}
+
+.curiosidade-card h4 {
+    font-size: 1.2rem;
+    margin: 15px 0 10px;
+}
+
+.curiosidade-card p {
+    font-size: 0.87rem;
+}
+
+/* =========================================
+   ESTANTE LITERÁRIA
+========================================= */
+
+.estante {
+    background-color: #F0EBDD;
+}
+
+.estante-livros {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 35px auto 70px;
+}
+
+.livro {
+    background: var(--papel);
+    padding: 22px;
+    border: 1px solid #DDD3BF;
+    box-shadow: 0 5px 15px var(--sombra);
+    text-align: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+}
+
+.livro:hover {
+    transform: translateY(-9px) rotate(-1deg);
+    box-shadow: 0 14px 25px var(--sombra);
+}
+
+.livro-imagem {
+    height: 275px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background: #EAE2D1;
+    box-shadow: 4px 6px 12px var(--sombra);
+}
+
+.livro-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.livro:hover .livro-imagem img {
+    transform: scale(1.06);
+}
+
+.livro h3 {
+    font-size: 1.4rem;
+    margin: 8px 0;
+}
+
+.livro p {
+    font-size: 0.86rem;
+    margin-bottom: 12px;
+}
+
+.livro .autor {
+    color: var(--marrom-claro);
+    font-size: 0.78rem;
+}
+
+.livro a {
+    display: inline-block;
+    margin-top: 12px;
+    padding-bottom: 4px;
+    color: var(--verde);
+    text-decoration: none;
+    border-bottom: 1px solid var(--verde-suave);
+    font-size: 0.84rem;
+    transition: 0.3s ease;
+}
+
+.livro a:hover {
+    letter-spacing: 1px;
+    color: var(--marrom);
+}
+
+/* =========================================
+   RESENHAS
+========================================= */
+
+.resenhas {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.resenha-card {
+    background: var(--branco);
+    padding: 35px 40px;
+    border-left: 4px solid var(--verde-suave);
+    box-shadow: 0 5px 18px var(--sombra);
+    scroll-margin-top: 100px;
+    transition: transform 0.3s ease;
+}
+
+.resenha-card:hover {
+    transform: translateX(5px);
+}
+
+.resenha-card h3 {
+    font-size: 1.55rem;
+    margin: 8px 0 18px;
+}
+
+.resenha-card p {
+    font-size: 0.9rem;
+    line-height: 2;
+}
+
+/* =========================================
+   VIAGENS E SONHOS
+========================================= */
+
+.viagens {
+    background: var(--papel);
+}
+
+.sonhos {
+    background: var(--creme);
+}
+
+.grade-lugares {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.lugar-card {
+    background: var(--branco);
+    box-shadow: 0 8px 22px var(--sombra);
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.lugar-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px var(--sombra);
+}
+
+.lugar-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.lugar-card:hover img {
+    transform: scale(1.06);
+}
+
+.lugar-info {
+    padding: 22px;
+}
+
+.lugar-info h3 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+}
+
+.lugar-info p {
+    font-size: 0.87rem;
+}
+
+/* =========================================
+   ESCRITOS
+========================================= */
+
+.escritos {
+    background:
+        radial-gradient(circle at 90% 10%, #DDB8AE25, transparent 25%),
+        var(--papel);
+}
+
+.poema {
+    position: relative;
+    max-width: 760px;
+    margin: auto;
+    padding: 55px;
+    background: #FFFDF6;
+    border: 1px solid #E7DDC9;
+    box-shadow: 0 10px 30px var(--sombra);
+    text-align: center;
+    transform: rotate(-0.5deg);
+}
+
+.poema h3 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.poema p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 2.1;
+    text-align: left;
+}
+
+.poema-flor {
+    position: absolute;
+    top: 15px;
+    right: 22px;
+    font-size: 2rem;
+    color: var(--verde-suave);
+}
+
+.assinatura {
+    display: block;
+    margin-top: 25px;
+    text-align: right;
+    color: var(--verde);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+/* =========================================
+   INSPIRAÇÕES
+========================================= */
+
+.inspiracoes {
+    background: #E9E8DC;
+    text-align: center;
+}
+
+.inspiracoes blockquote {
+    max-width: 800px;
+    margin: auto;
+    padding: 45px;
+    background: var(--branco);
+    border-top: 1px solid var(--verde-suave);
+    border-bottom: 1px solid var(--verde-suave);
+    color: var(--marrom);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.8;
+    box-shadow: 0 8px 22px var(--sombra);
+}
+
+.autora-citacao {
+    margin-top: 20px;
+    color: var(--verde);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+/* =========================================
+   ANIMAÇÕES
+========================================= */
+
+@keyframes aparecerEsquerda {
+    from {
+        opacity: 0;
+        transform: translateX(-35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aparecerDireita {
+    from {
+        opacity: 0;
+        transform: translateX(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes florRespira {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 950px) {
+
+    main section {
+        padding: 75px 6%;
+    }
+
+    main #inicio {
+        gap: 25px;
+    }
+
+    .foto-atual {
+        width: 245px;
+        height: 330px;
+    }
+
+    .foto-infancia {
+        width: 135px;
+    }
+
+    .curiosidades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .estante-livros {
+        gap: 18px;
+    }
+
+    .grade-lugares {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .header .header-navigation {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 650px) {
+
+    main section {
+        padding: 60px 7%;
+    }
+
+    main #inicio {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 65px;
+    }
+
+    .inicio-texto p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .inicio-fotos {
+        width: 100%;
+        min-height: 390px;
+    }
+
+    .foto-atual {
+        width: 225px;
+        height: 300px;
+    }
+
+    .foto-infancia {
+        width: 125px;
+        left: 0;
+        bottom: 0;
+    }
+
+    .frase-inicio {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+
+    .sobre-introducao {
+        padding: 28px 23px;
+    }
+
+    .curiosidades,
+    .estante-livros,
+    .grade-lugares {
+        grid-template-columns: 1fr;
+    }
+
+    .livro-imagem {
+        height: 300px;
+    }
+
+    .resenha-card {
+        padding: 28px 23px;
+    }
+
+    .poema {
+        padding: 45px 25px;
+    }
+
+    .inspiracoes blockquote {
+        padding: 30px 22px;
+        font-size: 1.2rem;
+    }
+
+    .header {
+        padding: 20px 5%;
+    }
+
+    .header .header-logo {
+        font-size: 19px;
+    }
+
+    .header .header-navigation {
+        gap: 12px 16px;
+    }
+}
+
+/* Acessibilidade: respeita preferência por menos movimento */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
