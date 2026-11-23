@@ -135,6 +135,14 @@ body > h1::before {
     vertical-align: middle;
 }
 
+body > h1::after {
+    content: "  ✦";
+    display: inline-block;
+    margin-right: 15px;
+    color: var(--amarelo-destaque);
+    font-size: 22px;
+    vertical-align: middle;
+}
 
 body > p {
     max-width: 950px;
@@ -254,11 +262,16 @@ body > h2 {
 }
 
 body > h2::before {
-    content: "✧  ";
+    content: "✦  ";
     color: var(--amarelo-destaque);
     font-size: 20px;
 }
 
+body > h2::after {
+    content: "  ✦";
+    color: var(--amarelo-destaque);
+    font-size: 20px;
+}
 
 /*
    CURIOSIDADES
@@ -307,7 +320,7 @@ body > ul li::before {
 }
 
 .curiosidade-titulo span {
-    color: var(--azul-claro);
+    color: var(--amarelo-destaque);
     font-size: 19px;
 }
 
@@ -392,7 +405,7 @@ body > ol li > a:hover {
 
 body > ol li > a::before {
     content: " ✧";
-    color: var(--azul-medio);
+    color: var(--amarelo-destaque);
     font-size: 17px;
 }
 
